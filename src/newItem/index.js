@@ -1,6 +1,7 @@
 const AWS = require('aws-sdk');
 
 exports.handler = async (event, context) => {
+  console.log('alo');
   const dynamodb = new AWS.DynamoDB.DocumentClient();
   const params = {
     TableName: process.env.TABLE_NAME, // get the table name from the automatically populated environment variables
